@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoloPyme - Sistema de Gestión para PYMES Chilenas | Adiós al Excel</title>
+    <meta name="description" content="Software de gestión para PYMES chilenas que facturan gratis por SII. Registra ventas, productos y clientes. Análisis de datos automático. $9.990/mes. ¡Únete a la lista de espera!">
+    <meta name="keywords" content="software pymes chile, gestión pymes, sistema ventas chile, reemplazar excel, software facturación sii, análisis datos pymes, registro ventas chile, gestión productos pymes">
+    <meta name="author" content="SoloPyme">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solopyme.cl/">
+    <meta property="og:title" content="SoloPyme - Sistema de Gestión para PYMES Chilenas">
+    <meta property="og:description" content="Gestiona tu PYME sin Excel. Software diseñado para empresas chilenas que facturan gratis por SII. Registro de ventas, productos y análisis de datos.">
+    <meta property="og:image" content="https://solopyme.cl/og-image.jpg">
+    <meta property="og:locale" content="es_CL">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://solopyme.cl/">
+    <meta property="twitter:title" content="SoloPyme - Sistema de Gestión para PYMES Chilenas">
+    <meta property="twitter:description" content="Gestiona tu PYME sin Excel. Software para empresas chilenas que facturan por SII.">
+    <meta property="twitter:image" content="https://solopyme.cl/og-image.jpg">
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://solopyme.cl/">
+    <meta name="geo.region" content="CL">
+    <meta name="geo.placename" content="Chile">
+    <meta name="language" content="es-CL">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SoloPyme",
+      "description": "Sistema de gestión empresarial para PYMES chilenas que facturan a través del SII",
+      "url": "https://solopyme.cl",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "9990",
+        "priceCurrency": "CLP",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SoloPyme",
+        "url": "https://solopyme.cl"
+      },
+      "featureList": [
+        "Registro de ventas",
+        "Gestión de productos",
+        "Base de datos de clientes", 
+        "Análisis de datos",
+        "Exportación a Excel",
+        "Diseñado para usuarios del SII Chile"
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'oklch(0.7686 0.1647 70.0804)',
+                        'primary-dark': 'oklch(0.6686 0.1647 70.0804)',
+                        'primary-light': 'oklch(0.8686 0.1647 70.0804)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(164, 202, 57, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(164, 202, 57, 0.6); }
+        }
+        .float-animation { animation: float 3s ease-in-out infinite; }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .gradient-bg {
+            background: linear-gradient(135deg, 
+                oklch(0.95 0.02 70.0804) 0%, 
+                oklch(0.98 0.01 70.0804) 50%, 
+                oklch(0.96 0.015 70.0804) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">SP</span>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900">SoloPyme</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-primary transition-colors">Características</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-primary transition-colors">Beneficios</a>
+                    <a href="#waitlist" class="text-gray-600 hover:text-primary transition-colors">Lista de Espera</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                            <span class="block">Software de Gestión</span>
+                            <span class="block">para <span class="text-primary">PYMES Chilenas</span></span>
+                        </h1>
+                        <h2 class="text-xl text-gray-600 leading-relaxed">
+                            Gestiona ventas, productos y clientes sin Excel. Diseñado para empresas que ya facturan gratuitamente a través del SII.
+                        </h2>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center space-x-2 bg-white/70 rounded-full px-4 py-2">
+                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span class="text-sm font-medium">Registro de Ventas</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white/70 rounded-full px-4 py-2">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm font-medium">Gestión de Productos</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white/70 rounded-full px-4 py-2">
+                            <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            <span class="text-sm font-medium">Análisis de Datos</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#waitlist" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 pulse-glow text-center">
+                            Únete a la Lista de Espera
+                        </a>
+                        <button onclick="scrollToFeatures()" class="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg border border-gray-200 transition-all duration-300 hover:shadow-lg text-center">
+                            Ver Características
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="float-animation">
+                        <div class="bg-white rounded-3xl shadow-2xl p-8 transform rotate-3">
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm font-medium text-gray-500">Dashboard</span>
+                                    <div class="w-3 h-3 bg-primary rounded-full"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Ventas del Mes</h3>
+                                <div class="text-3xl font-bold text-primary">$2.450.000</div>
+                                <div class="space-y-2">
+                                    <div class="bg-gray-100 rounded-full h-3">
+                                        <div class="bg-primary rounded-full h-3 w-3/4"></div>
+                                    </div>
+                                    <div class="text-sm text-gray-600">75% del objetivo mensual</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-20 -right-1 float-animation" style="animation-delay: 1s;">
+                        <div class="bg-primary/10 rounded-2xl p-6 backdrop-blur-sm border border-primary/20">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-primary">156</div>
+                                <div class="text-sm text-gray-600">Facturas este mes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Herramientas Completas para tu PYME</h2>
+                <h3 class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Software de gestión empresarial diseñado específicamente para PYMEs chilenas que facturan a través del SII
+                </h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group p-8 rounded-2xl border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Registro de Ventas</h3>
+                    <p class="text-gray-600">Registra todas tus ventas de forma simple y mantén un control preciso de tus ingresos sin complicaciones.</p>
+                </div>
+                
+                <div class="group p-8 rounded-2xl border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Gestión de Productos</h3>
+                    <p class="text-gray-600">Organiza tu inventario, controla stock y gestiona precios de manera eficiente desde una sola plataforma.</p>
+                </div>
+                
+                <div class="group p-8 rounded-2xl border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Base de Clientes</h3>
+                    <p class="text-gray-600">Mantén un registro completo de tus clientes y construye relaciones más sólidas y duraderas.</p>
+                </div>
+                               
+                <div class="group p-8 rounded-2xl border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Exportación a Excel</h3>
+                    <p class="text-gray-600">Exporta toda tu información para análisis avanzados en Excel cuando lo necesites.</p>
+                </div>
+                
+                <div class="group p-8 rounded-2xl border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Para usuarios del SII</h3>
+                    <p class="text-gray-600">Diseñado especialmente para empresas que ya facturan de forma gratuita a través del portal del SII.</p>
+                </div>
+                
+                <div class="group p-8 rounded-2xl border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Fácil de Usar</h3>
+                    <p class="text-gray-600">Interface intuitiva diseñada para que puedas enfocarte en hacer crecer tu negocio, no en aprender software.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Precio Transparente para PYMES</h2>
+            <h3 class="text-lg text-gray-600 mb-8">Una inversión que se paga sola en ahorro de tiempo</h3>
+            <div class="bg-gradient-to-r from-primary/10 to-primary/5 rounded-3xl p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16"></div>
+                <div class="absolute bottom-0 left-0 w-24 h-24 bg-primary/10 rounded-full -ml-12 -mb-12"></div>
+                <div class="relative z-10">
+                    <div class="text-6xl font-bold text-primary mb-4">$9.990</div>
+                    <div class="text-xl text-gray-600 mb-6">pesos chilenos / mes</div>
+                    <div class="text-gray-700 mb-8 max-w-2xl mx-auto">
+                        Menos de lo que gastas en café al mes. Una herramienta completa que te ahorra horas de trabajo y te da insights valiosos para hacer crecer tu negocio.
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6 text-sm">
+                        <div class="bg-white/70 rounded-xl p-4">
+                            <div class="font-semibold text-gray-900 mb-2">Sin compromisos</div>
+                            <div class="text-gray-600">Cancela cuando quieras</div>
+                        </div>
+                        <div class="bg-white/70 rounded-xl p-4">
+                            <div class="font-semibold text-gray-900 mb-2">Sin instalación</div>
+                            <div class="text-gray-600">100% online, siempre actualizado</div>
+                        </div>
+                        <div class="bg-white/70 rounded-xl p-4">
+                            <div class="font-semibold text-gray-900 mb-2">Datos seguros</div>
+                            <div class="text-gray-600">Tu información siempre protegida</div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-sm text-gray-500">
+                        💡 <strong>Tip:</strong> Con solo ahorrar 2 horas al mes en tareas administrativas, ya recuperaste la inversión
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">¿Por qué SoloPyme?</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Adiós a las planillas Excel</h3>
+                                <p class="text-gray-600">Termina con los errores de cálculo y la pérdida de información. Todo automatizado y seguro.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Decisiones basadas en datos</h3>
+                                <p class="text-gray-600">Conoce realmente cómo está tu negocio con reportes claros y análisis automáticos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Ahorra tiempo valioso</h3>
+                                <p class="text-gray-600">Dedica más tiempo a hacer crecer tu negocio y menos a tareas administrativas repetitivas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Diseñado para Chile</h3>
+                                <p class="text-gray-600">Pensado específicamente para PYMEs chilenas que usan el sistema gratuito del SII.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white rounded-3xl shadow-2xl p-8 transform -rotate-3">
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-4">Resumen Mensual</h4>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-600">Ventas Totales</span>
+                                    <span class="font-bold text-primary">$3.240.000</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-600">Facturas Emitidas</span>
+                                    <span class="font-bold">187</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-600">Clientes Nuevos</span>
+                                    <span class="font-bold">23</span>
+                                </div>
+                                <div class="pt-4 border-t border-gray-100">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-600">Crecimiento</span>
+                                        <span class="font-bold text-green-500">+18.5%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-20 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-12">
+                <h2 class="text-4xl font-bold text-white mb-6">¿Listo para revolucionar tu PYME?</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+                    Únete a nuestra lista de espera y sé de los primeros en acceder a SoloPyme cuando esté disponible.
+                </p>
+                <div class="bg-primary/20 border border-primary/30 rounded-2xl p-6 max-w-sm mx-auto mb-8">
+                    <div class="text-white">
+                        <div class="text-3xl font-bold">$9.990</div>
+                        <div class="text-primary-light text-lg">mensual</div>
+                        <div class="text-sm text-gray-300 mt-2">Suscripción simple, sin compromisos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="waitlistForm" class="max-w-md mx-auto space-y-4">
+                <div>
+                    <input 
+                        type="text" 
+                        id="name"
+                        name="name"
+                        placeholder="Tu nombre"
+                        required
+                        class="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
+                    >
+                </div>
+                <div>
+                    <input 
+                        type="email" 
+                        id="email"
+                        name="email"
+                        placeholder="tu@email.com"
+                        required
+                        class="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
+                    >
+                </div>
+                <div>
+                    <input 
+                        type="text" 
+                        id="company"
+                        name="company"
+                        placeholder="Nombre de tu empresa"
+                        class="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
+                    >
+                </div>
+                <button 
+                    type="submit"
+                    class="w-full bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    id="submitBtn"
+                >
+                    Únete a la Lista de Espera
+                </button>
+            </form>
+            
+            <div id="message" class="mt-6 text-center hidden"></div>
+            
+            <p class="text-gray-400 text-sm mt-6">
+                No spam, solo actualizaciones importantes sobre SoloPyme.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-4">
+                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">SP</span>
+                </div>
+                <span class="text-2xl font-bold text-white">SoloPyme</span>
+            </div>
+            <p class="text-gray-400">
+                © 2025 SoloPyme. Diseñado especialmente para PYMEs chilenas.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Configuración de la URL del waitlist
+        const WAITLIST_URL = 'https://waitlist-backnd-1e126c9ceccb.herokuapp.com/waitlist';
+        
+        // Smooth scroll para los enlaces del menú
+        function scrollToFeatures() {
+            document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Manejo del formulario de waitlist
+        document.getElementById('waitlistForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const messageDiv = document.getElementById('message');
+            
+            // Deshabilitar botón y mostrar estado de carga
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Procesando...';
+            messageDiv.className = 'mt-6 text-center hidden';
+            
+            // Obtener datos del formulario
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value
+            };
+            
+            try {
+                const response = await fetch(WAITLIST_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.status === 201) {
+                    // Éxito
+                    messageDiv.className = 'mt-6 text-center bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-xl';
+                    messageDiv.textContent = '¡Genial! Te has unido exitosamente a nuestra lista de espera. Te contactaremos pronto.';
+                    document.getElementById('waitlistForm').reset();
+                } else {
+                    throw new Error('Error en el servidor');
+                }
+            } catch (error) {
+                // Error
+                messageDiv.className = 'mt-6 text-center bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-xl';
+                messageDiv.textContent = 'Hubo un error al procesar tu solicitud. Por favor, inténtalo nuevamente.';
+            } finally {
+                // Restaurar botón
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Únete a la Lista de Espera';
+                messageDiv.classList.remove('hidden');
+            }
+        });
+        
+        // Navegación suave para todos los enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
