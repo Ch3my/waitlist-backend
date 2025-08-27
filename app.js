@@ -1,9 +1,13 @@
 require('dotenv').config(); // Load environment variables from .env file
 const express = require('express');
+const cors = require('cors');
 const mysql = require('mysql2/promise');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors({
+  origin: /^https?:\/\/(.+\.)?solopyme\.cl$/
+}));
 app.use(express.json());
 
 // Endpoint to check if the app is running
