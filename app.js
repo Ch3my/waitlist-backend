@@ -20,7 +20,7 @@ app.post('/waitlist', async (req, res) => {
   const { name, email } = req.body;
 
   // Regular expression for basic email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[^S@]+@[^S@]+S.S@$/;
 
   // Basic validation for name, and email format
   if (!name || !email) {
@@ -40,8 +40,15 @@ app.post('/waitlist', async (req, res) => {
       database: process.env.DB_DATABASE
     });
 
-    const query = 'INSERT INTO waitlist (name, email) VALUES (?, ?)';
-    const [rows] = await connection.execute(query, [name, email]);
+    // Check if email already exists
+    const [existing] = await connection.execute('SELECT * FROM waitlist WHERE email = ?', [email]);
+
+    if (existing.length === 0) {
+      // Email does not exist, so insert it
+      const query = 'INSERT INTO waitlist (name, email) VALUES (?, ?)';
+      await connection.execute(query, [name, email]);
+    }
+
     await connection.end();
 
     res.status(201).send('Successfully added to the waitlist! 🎉');
