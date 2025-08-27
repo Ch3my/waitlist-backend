@@ -20,13 +20,13 @@ app.post('/waitlist', async (req, res) => {
   const { name, email } = req.body;
 
   // Regular expression for basic email validation
-  const emailRegex = /^[^S@]+@[^S@]+S.S@$/;
+  const emailRegex = /^\S+@\S+\.\S+$/;
 
   // Basic validation for name, and email format
   if (!name || !email) {
     return res.status(400).send('Name and email are required.');
   }
-  
+
   if (!emailRegex.test(email)) {
     return res.status(400).send('Please enter a valid email address.');
   }
