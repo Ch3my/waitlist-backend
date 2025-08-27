@@ -52,6 +52,28 @@ app.post('/waitlist', async (req, res) => {
   }
 });
 
+// Endpoint to get all elements from the waitlist table
+app.get('/waitlist', async (req, res) => {
+  try {
+    const connection = await mysql.createConnection({
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE
+    });
+
+    const query = 'SELECT * FROM waitlist';
+    const [rows] = await connection.execute(query);
+    await connection.end();
+
+    res.status(200).json(rows);
+
+  } catch (error) {
+    console.error('Error fetching waitlist:', error);
+    res.status(500).send('Server error. Please try again later.');
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server listening on http://localhost:${port}`);
 });
